@@ -1,3 +1,3 @@
 #pragma once
 
-#include "termfmt/center.hpp"
+#include "termfmt/format.hpp"
