@@ -1,10 +1,10 @@
-# termfmt
+# 🚀 termfmt
 
-> Composable terminal formatting for C++
+> Composable terminal formatting for C++ (header-only)
 
 ---
 
-## What is this?
+## 📘 Overview
 
 `termfmt` is a lightweight C++ library that makes terminal output **predictable, readable, and composable**.
 
@@ -17,7 +17,7 @@ line(50)
 
 ---
 
-## Why `termfmt`?
+## ⚡ Why `termfmt`?
 
 Standard C++ formatting is **stateful and fragile**:
 
@@ -43,7 +43,13 @@ std::cout << center("Hello", 20, '-');
 
 ---
 
-## Example
+## 📸 Output Preview
+
+<p align="center">
+  <img src="assets/demo.png" alt="termfmt demo output" width="700">
+</p>
+
+## 🧪 Example
 
 ```cpp
 #include <iostream>
@@ -84,8 +90,17 @@ int main() {
 ```
 
 ---
+## ✨ Features
 
-## API
+- `center(value, width, fill = ' ')`
+- `line(width, fill = '-')`
+- `table(columns, width)`
+- Supports **mixed data types** (int, double, string, char, etc.)
+- Header-only — no build system required
+
+---
+
+## 📚 API
 
 ### `center(value, width, fill = ' ')`
 
@@ -128,9 +143,9 @@ Supports **mixed data types** via variadic templates.
 
 ---
 
-## Installation
+## 📦 Installation
 
-Header-only. Just include:
+The library is header-only. Just include it:
 
 ```cpp
 #include <termfmt.hpp>
@@ -144,9 +159,9 @@ g++ main.cpp -Iinclude -o app
 
 ---
 
-## Design
+## 🧠 Design
 
-termfmt uses **value-based formatting**, not stream state.
+`termfmt` uses **value-based formatting**, not stream state.
 
 Each formatting unit:
 - is self-contained  
@@ -155,5 +170,13 @@ Each formatting unit:
 
 ---
 
-## License
+## 👤 Author
+
+Built with ❤️ by **Akshit Kumar**  
+🔗 https://github.com/akshitkumar0
+
+---
+
+## 📜 License
+
 MIT
