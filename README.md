@@ -170,6 +170,12 @@ Each formatting unit:
 
 ---
 
+## 🤝 Contributing
+
+Contributions are welcome!
+
+---
+
 ## 👤 Author
 
 Built with ❤️ by **Akshit Kumar**  
