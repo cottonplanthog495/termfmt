@@ -46,7 +46,9 @@ std::cout << center("Hello", 20, '-');
 ## 📸 Output Preview
 
 <p align="center">
-  <img src="assets/demo.png" alt="termfmt demo output" width="700">
+  <img src="assets/demo1.png" height="250">
+  <img src="assets/demo2.png" height="250">
+  <img src="assets/demo3.png" height="250">
 </p>
 
 ## 🧪 Example
@@ -95,6 +97,7 @@ int main() {
 - `center(value, width, fill = ' ')`
 - `line(width, fill = '-')`
 - `table(columns, width)`
+- `table::set_style(border_style)` → supports `simple` and `boxed`
 - Supports **mixed data types** (int, double, string, char, etc.)
 - Header-only — no build system required
 
@@ -140,6 +143,18 @@ t.print();
 ```
 
 Supports **mixed data types** via variadic templates.
+
+### `set_style(border_style)`
+
+Controls table border rendering.
+
+```cpp
+t.set_style(termfmt::border_style::boxed);
+```
+#### **Available styles:**
+- `border_style::simple` → simple line separators
+- `border_style::boxed` → borders with `+` intersections
+
 
 ---
 
