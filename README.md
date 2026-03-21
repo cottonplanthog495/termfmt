@@ -46,9 +46,12 @@ std::cout << center("Hello", 20, '-');
 ## 📸 Output Preview
 
 <p align="center">
-  <img src="assets/demo1.png" height="250">
-  <img src="assets/demo2.png" height="250">
-  <img src="assets/demo3.png" height="250">
+  <img src="assets/demo1.png" height="220">
+  <img src="assets/demo2.png" height="220">
+</p>
+
+<p align="center">
+  <img src="assets/demo3.png" height="220">
 </p>
 
 ## 🧪 Example
