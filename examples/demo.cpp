@@ -33,23 +33,27 @@ int main() {
     // ===== Section: Table Rendering =====
     std::cout << "\n";
     std::cout << center(" Table Example ", 85, '-') << '\n';
-
+    
     table t(4, 20);
-
+    
     t.header({"ID", "Name", "Department", "Performance"});
-
+    
     t.add_row("#001", "John Smith", "Management", 900);
     t.add_row("#002", "Alice Raje Johnson", "Human Resource", 850);
     t.add_row("#003", "Ethane H", "Finance", 920);
     t.add_row("#004", "Sidhit Singh", "Transport", 880);
-
+    
     // Use different styles from here
-    // t.set_style(border_style::simple);
-    // t.set_style(border_style::boxed)
-
+    std::cout << center("### Simple Style ###", 85) << '\n';
+    t.set_style(border_style::simple);
     t.print();
+     
+    std::cout << center("### Boxed Style ###", 85) << '\n';
+    t.set_style(border_style::boxed);
+    t.print();
+
     std::cout << '\n';
-    std::cout << center(" More Features Coming Soon! ", 85, '-') << '\n';
+    std::cout << center(" More Features Coming Soon! ", 85) << '\n';
     std::cout << '\n';
 
     return 0;
