@@ -7,13 +7,23 @@
 
 namespace termfmt {
 
+    // different styles
+    enum class border_style {
+        simple,
+        boxed
+    };
+
     class table {
       private:
         int cols;
         int w; // width of each column
+        border_style style = border_style::simple;
         
         std::vector<std::string> header_row;
         std::vector<std::vector<std::string>> rows;
+
+        // Dynamically print separators based on style
+        void print_separator(int width) const;
 
         template<typename T>
         std::string to_string_any(const T& value) {
@@ -42,6 +52,10 @@ namespace termfmt {
             rows.push_back(v);
         }
 
+        void set_style(border_style s) {
+            style = s;
+        }
+
         void print() const {
             
             int width = w;
@@ -50,9 +64,8 @@ namespace termfmt {
                     width = cell.length();
                 }
             }
-            int total_width = cols * (width + 1) + 1;
 
-            std::cout << line(total_width);
+            print_separator(width);
 
             // Header row
             std::cout << '|';
@@ -60,7 +73,8 @@ namespace termfmt {
                 std::cout << center(cell, width) << '|';
             }
 
-            std::cout << '\n' << line(total_width);
+            std::cout << '\n';
+            print_separator(width);
             
             // Data rows
             for (const auto& row : rows) {
@@ -71,8 +85,30 @@ namespace termfmt {
                 std::cout << '\n';
             }
 
-            std::cout << line(total_width);
+            print_separator(width);
         }
     };
-    
+
+    void table::print_separator(int width) const {
+            
+            switch (style)
+            {
+                case border_style::simple: {
+
+                    int total_width = cols * (w + 1) + 1;
+                    std::cout << line(total_width);
+                    break;
+                }
+                case border_style::boxed: {
+                    std::cout << '+';
+                    
+                    for (int i = 0; i < cols; i++) {
+                        std::cout << std::string(width, '-') << '+';
+                    }
+                    
+                    std::cout << '\n';
+                    break;
+                }
+            }
+        };
 }

@@ -5,6 +5,7 @@ int main() {
     using termfmt::center;
     using termfmt::line;
     using termfmt::table;
+    using termfmt::border_style;
 
     // ===== Section: Basic Formatting =====
     std::cout << "\n";
@@ -42,8 +43,11 @@ int main() {
     t.add_row("#003", "Ethane H", "Finance", 920);
     t.add_row("#004", "Sidhit Singh", "Transport", 880);
 
-    t.print();
+    // Use different styles from here
+    // t.set_style(border_style::simple);
+    // t.set_style(border_style::boxed)
 
+    t.print();
     std::cout << '\n';
     std::cout << center(" More Features Coming Soon! ", 85, '-') << '\n';
     std::cout << '\n';
